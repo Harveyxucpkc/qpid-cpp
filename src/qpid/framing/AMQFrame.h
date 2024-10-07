@@ -69,10 +69,10 @@ class QPID_COMMON_CLASS_EXTERN AMQFrame : public AMQDataBlock
 
     // 0-10 terminology: first/last frame (in segment) first/last segment (in assembly)
 
-    bool isFirstSegment() const { return bof; }
-    bool isLastSegment() const { return eof; }
-    bool isFirstFrame() const { return bos; }
-    bool isLastFrame() const { return eos; }
+    bool isFirstSegment() const { return bos; }
+    bool isLastSegment() const { return eos; }
+    bool isFirstFrame() const { return bof; }
+    bool isLastFrame() const { return eof; }
 
     void setFirstSegment(bool set=true) { bof = set; }
     void setLastSegment(bool set=true) { eof = set; }
